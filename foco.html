@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foco || juasjuas</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="cambiar-foco" src="foco_apagado.jpeg" alt="">
+        <div class="opciones">
+            <button id="foco" onclick="cambiarColorA()">Encender foco</button>
+        </div>
+    </div>
+    <script>
+        let focoEncendido = false;
+
+        function cambiarColorA() {
+            const bochoImg = document.getElementById("cambiar-foco");
+            const focoBtn = document.getElementById("foco");
+
+            if (focoEncendido) {
+                bochoImg.src = "foco_apagado.jpeg";
+                focoBtn.textContent = "Encender foco";
+            } else {
+                bochoImg.src = "foco_encendido.jpeg";
+                focoBtn.textContent = "Apagar foco";
+            }
+
+            focoEncendido = !focoEncendido;
+        }
+    </script>
+</body>
+</html>
